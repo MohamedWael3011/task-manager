@@ -9,14 +9,13 @@ import {
   Query,
   UseGuards
 } from '@nestjs/common';
-import { Task } from './task.entity';
 import { TasksService } from './tasks.service';
 import { TasksFilterDto } from './dtos/filter-task.dto';
 import { CreateTaskDto } from './dtos/create-task.dto';
 import { UpdateTaskStatusDto } from './dtos/update-task-status.dto';
 import { AuthGuard } from '@nestjs/passport';
 import { GetUser } from 'src/auth/get-user.decorator';
-import { User } from 'src/auth/user.entity';
+import { Task, User } from '@prisma/client';
 
 @Controller('tasks')
 @UseGuards(AuthGuard())

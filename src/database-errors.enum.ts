@@ -1,3 +1,3 @@
 export enum DataBaseErrors {
-  NOT_UNIQUE = '23505'
+  NOT_UNIQUE = 'P2002'
 }
